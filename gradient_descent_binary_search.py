@@ -19,6 +19,9 @@ import matplotlib as plt
 from math import sqrt
 
 class BinGradientDescent(object):
+    #it contains functions necessary. You can get the high and low from the function 
+    #choose_high_low() and use them in the main grad_desc_theta() function by adding it
+    #to the fit() function.
     def __init__(self,X,Y,precision,iterations=int('inf'),wno=False):
         self.iter= iterations
         self.X = X
