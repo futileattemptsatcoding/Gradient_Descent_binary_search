@@ -12,8 +12,6 @@
 #to that particular weight should be minimum, as it is minimum globally,
 #and if it is minimum globally then it should also be minimum locally.
 
-#man i'm barely understanding this.
-#okay, now writing the code.
 
 import pandas as pd
 import numpy as np
