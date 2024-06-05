@@ -19,9 +19,7 @@ import matplotlib as plt
 from math import sqrt
 
 class BinGradientDescent(object):
-    #it contains functions necessary. You can get the high and low from the function 
-    #choose_high_low() and use them in the main grad_desc_theta() function by adding it
-    #to the fit() function.
+   
     def __init__(self,X,Y,precision,iterations=int('inf'),wno=False):
         self.iter= iterations
         self.X = X
@@ -41,7 +39,11 @@ class BinGradientDescent(object):
 
         #choosing a random bias value initially.
         self.bias = 10
-        pass
+        for i in range(self.X.shape[1]):
+            #apply gradient descent to each feature
+            high, low = self.choose_high_low(i)
+            self.grad_desc_theta(i,high,low)
+            #modifies the weight list
 
     
     def grad_desc_theta(self,index,high,low):
